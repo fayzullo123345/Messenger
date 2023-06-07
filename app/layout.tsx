@@ -1,6 +1,8 @@
-import './globals.css'
 import { Inter } from 'next/font/google'
 import React from "react";
+import ToasterContext from "@/app/context/ToasterContext";
+import './globals.css'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,6 +22,7 @@ export default function RootLayout({
         className={inter.className}
         suppressHydrationWarning={true}
       >
+      <ToasterContext/>
       {children}
       </body>
     </html>
